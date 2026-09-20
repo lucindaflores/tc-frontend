@@ -1,0 +1,26 @@
+<a class="product-link" [routerLink]="['/products', product().id]">
+
+  <article class="product-card">
+    <div class="product-image-container">
+      <img
+        class="product-image"
+        [src]="product().imageUrl"
+        [alt]="product().name">
+    </div>
+
+    <div class="product-status">
+      <p class="product-origin">{{ product().originName }}</p>
+      @if (product().stock === 0) {
+        <p class="out-of-stock">Out of stock</p>
+      }
+    </div>
+
+    <div class="product-info">
+      <h2 class="product-name">{{ product().name }}</h2>
+      <p class="product-price">€{{ product().price }}</p>
+    </div>
+  </article>
+
+</a>
+
+

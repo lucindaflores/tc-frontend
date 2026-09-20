@@ -1,11 +1,13 @@
 import { Component, inject, ChangeDetectorRef  } from '@angular/core';
 import {ProductCondensed} from './product-model';
 import {ProductService} from './product-service';
+import { ProductCard } from './product-card/product-card';
 import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
   imports: [
+    ProductCard
   ],
   selector: 'app-product',
   styleUrl: './product.css',
@@ -28,14 +30,12 @@ export class Product {
   constructor() {
     this.route.queryParams.subscribe((params) => {
 
-      console.log("START");
       const categoryId = Number(params['category']);
 
       if (categoryId === 1 || categoryId === 2 || categoryId === 3) {
         void this.loadByCategory(categoryId);
       } else {
         void this.loadByCategory(0);
-        console.log("cat 0");
       }
 
     });
@@ -53,7 +53,6 @@ export class Product {
         this.products = await this.productService.findAll();
       } else {
         this.products = await this.productService.findByCategory(categoryId);
-        console.log("Button clicked: " + categoryId);
       }
 
     } catch (error) {

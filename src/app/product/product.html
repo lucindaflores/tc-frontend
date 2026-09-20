@@ -48,7 +48,8 @@
     <!--Product grid-->
     <div class="product-grid">
       @for (product of products; track product.id) {
-          <label> {{ product.name }}</label>
+        <!--Product card-->
+        <app-product-card [product]="product" />
       }
     </div>
   </section>

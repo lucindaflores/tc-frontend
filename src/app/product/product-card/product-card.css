@@ -1,0 +1,83 @@
+/* Card's texts (bc it's a link) */
+.product-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-link:visited {
+  color: inherit;
+}
+
+.product-card {
+  width: 100%;
+}
+
+/* Image proportion */
+.product-image-container {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background-color: var(--color-secondary);
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border: 2px solid var(--color-primary);
+}
+
+/* Product info below image */
+/* Origin & stock status*/
+.product-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 14px 0 6px;
+}
+
+.product-origin {
+  margin: 0;
+  color: var(--color-muted-foreground);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.out-of-stock {
+  margin: 0;
+
+  color: var(--color-accent);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Title & price*/
+.product-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.product-name {
+  margin: 0;
+  font-family: var(--font-heading), serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.product-price {
+  margin: 0;
+  flex-shrink: 0;
+  font-family: var(--font-heading), serif;
+  font-size: 19px;
+  font-weight: 700;
+}
