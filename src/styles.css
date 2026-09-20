@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,700&family=Outfit:wght@300;400;500;600&display=swap');
+
+:root {
+  --color-background: #FAF7F2;
+  --color-foreground: #1A0F08;
+  --color-card: #FFFFFF;
+  --color-primary: #1B4FBF;
+  --color-primary-hover: #163F99;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #F2EDE4;
+  --color-muted: #EBE5DA;
+  --color-muted-foreground: #7A6B5A;
+  --color-accent: rgb(214, 78, 34);
+  --color-border: rgba(26, 15, 8, 0.1);
+
+  --font-heading: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Outfit', Arial, sans-serif;
+
+  --page-width: 1120px;
+  --header-height: 64px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body), serif;
+  font-size: 16px;
+}
