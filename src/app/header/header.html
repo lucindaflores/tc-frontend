@@ -1,0 +1,43 @@
+<header class="header">
+  <nav class="header-nav">
+
+    <a class="logo" routerLink="/">
+      <span class="logo-main">Talavera</span>
+      <span class="logo-sub">&amp; Cobalto</span>
+    </a>
+
+
+    <div class="header-links">
+      <a routerLink="/products/"
+         [queryParams]="{ category: 1 }">Cookware</a>
+      <a routerLink="/products"
+         [queryParams]="{ category: 2 }">Tableware</a>
+      <a routerLink="/products"
+         [queryParams]="{ category: 3 }">Décor</a>
+      <a routerLink="/products"
+         [queryParams]="{ category: 0 }">All</a>
+    </div>
+
+
+    <div class="header-actions">
+      <!--      <button class="icon-button"-->
+      <!--              type="button"-->
+      <!--              aria-label="Account">-->
+      <!--        <img class="header-icons"-->
+      <!--          src="/assets/icons/user.svg">-->
+      <!--      </button>-->
+
+      <button class="icon-button"
+              type="button"
+              aria-label="Cart"
+              routerLink="/cart">
+        <img src="/assets/icons/shopping-bag.svg"
+             alt="shopping bag icon"
+             class="header-icons">
+
+      </button>
+
+    </div>
+  </nav>
+</header>
+
