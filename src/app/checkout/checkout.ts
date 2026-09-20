@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 import { UserService } from './user-service';
 import { AddressService } from './address-service';
@@ -11,7 +11,7 @@ import { AddressModel } from './address-model';
 
 @Component({
   selector: 'app-checkout',
-  imports: [FormsModule, RouterLink ],
+  imports: [FormsModule ],
   templateUrl: './checkout.html',
   styleUrl: './checkout.css'
 })
