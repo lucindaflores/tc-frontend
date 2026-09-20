@@ -1,0 +1,55 @@
+.payment-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 45px 24px 80px;
+
+}
+
+.payment-page h1 {
+  margin: 0 0 35px;
+
+  font-family: var(--font-heading), serif;
+  font-size: 36px;
+}
+
+.payment-page h2 {
+  margin: 0 0 22px;
+
+  font-family: var(--font-body), serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+ /* PLACE HOLDER */
+.payment-page p {
+  margin-top: 60px;
+
+}
+/* CONTINUE */
+.continue-button {
+  width: 100%;
+
+  margin-top: 200px;
+  padding: 16px;
+
+  border: none;
+
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+
+  font-family: var(--font-body), serif;
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.continue-button:hover {
+  background-color: var(--color-primary-hover);
+}

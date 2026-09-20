@@ -1,0 +1,19 @@
+<section class="payment-page">
+
+  <h1>Payment</h1>
+
+  <form class="payment-form" #paymentForm="ngForm">
+    <h2>Card Information</h2>
+
+    <p>This is a placeholder page for debit/credit card information</p>
+
+    <button
+      class="continue-button"
+      type="button"
+      (click)="finishOrder()"
+      routerLink="/checkout/ready">
+      Finish your order →
+    </button>
+  </form>
+
+</section>

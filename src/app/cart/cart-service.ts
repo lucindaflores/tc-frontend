@@ -8,7 +8,6 @@ export class CartService {
   private readonly cartItems = signal<CartModel[]>([]);
   private readonly cartOpen = signal(false);
 
-  // So cartService can change it, but other components can only read it!
   items = this.cartItems.asReadonly();
 
   add(product: ProductModel, quantity: number) {
@@ -76,7 +75,6 @@ export class CartService {
 
 
   updateQuantity(productId: number, quantity: number) {
-
     const items = [...this.cartItems()];
 
     for (let i = 0; i < items.length; i++) {

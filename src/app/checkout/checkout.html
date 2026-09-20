@@ -1,0 +1,136 @@
+<section class="checkout-page">
+
+  <h1>Delivery Details</h1>
+
+  <form class="delivery-form" #deliveryForm="ngForm">
+
+    <h2>Contact Information</h2>
+
+    <div class="form-row">
+      <div class="form-field">
+        <label for="firstName">First name</label>
+        <input
+          id="firstName"
+          name="firstName"
+          type="text"
+          required
+          [(ngModel)]="user.firstName"
+          #firstName="ngModel">
+      </div>
+
+      <div class="form-field">
+        <label for="lastName">Last name</label>
+        <input
+          id="lastName"
+          name="lastName"
+          type="text"
+          required
+          [(ngModel)]="user.lastName"
+          #lastName="ngModel">
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        email
+        [(ngModel)]="user.email"
+        #email="ngModel">
+    </div>
+
+
+    <h2 class="address-title">Shipping Address</h2>
+
+    <div class="form-row">
+      <div class="form-field street-field">
+        <label for="street">Street</label>
+        <input
+          id="street"
+          name="street"
+          type="text"
+          required
+          [(ngModel)]="address.street"
+          #street="ngModel">
+      </div>
+
+      <div class="form-field house-field">
+        <label for="houseNumber">House number</label>
+        <input
+          id="houseNumber"
+          name="houseNumber"
+          type="text"
+          required
+          [(ngModel)]="address.houseNumber"
+          #houseNumber="ngModel">
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="bus">Bus / apartment (optional)</label>
+      <input
+        id="bus"
+        name="bus"
+        type="text"
+        [(ngModel)]="address.bus">
+    </div>
+
+
+    <div class="form-row">
+      <div class="form-field">
+        <label for="city">City</label>
+        <input
+          id="city"
+          name="city"
+          type="text"
+          required
+          [(ngModel)]="address.city"
+          #city="ngModel">
+      </div>
+
+      <div class="form-field">
+        <label for="postalCode">ZIP / Postal code</label>
+        <input
+          id="postalCode"
+          name="postalCode"
+          type="text"
+          required
+          [(ngModel)]="address.postalCode"
+          #postalCode="ngModel">
+      </div>
+    </div>
+
+
+    <div class="form-field">
+      <label for="country">Country</label>
+      <input
+        id="country"
+        name="country"
+        type="text"
+        required
+        [(ngModel)]="address.country"
+        #country="ngModel">
+    </div>
+
+
+    <div class="form-message">
+      @if (deliveryForm.invalid && deliveryForm.touched) {
+        <p>Please complete all required fields before continuing.</p>
+      }
+    </div>
+
+
+    <button
+      class="continue-button"
+      type="button"
+      [disabled]="deliveryForm.invalid"
+      (click)="continueToPayment()">
+      Continue to payment →
+    </button>
+
+  </form>
+
+</section>

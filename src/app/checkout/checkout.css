@@ -1,0 +1,122 @@
+.checkout-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 45px 24px 80px;
+}
+
+.checkout-page h1 {
+  margin: 0 0 35px;
+  font-family: var(--font-heading), serif;
+  font-size: 36px;
+}
+
+
+/* SECTION TITLES */
+
+.delivery-form h2 {
+  margin: 0 0 22px;
+  font-family: var(--font-body), serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.address-title {
+  margin-top: 45px !important;
+}
+
+
+/* FORM */
+
+.form-row {
+  display: flex;
+  gap: 25px;
+}
+
+.form-field {
+  flex: 1;
+  margin-bottom: 25px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-muted-foreground);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.form-field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 2px;
+
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  outline: none;
+
+  background-color: transparent;
+  color: var(--color-foreground);
+
+  font-family: var(--font-body), serif;
+  font-size: 14px;
+}
+
+.form-field input:focus {
+  border-bottom-color: var(--color-primary);
+}
+
+
+/* STREET / HOUSE NUMBER */
+
+.street-field {
+  flex: 3;
+}
+
+.house-field {
+  flex: 1;
+}
+
+
+/* VALIDATION MESSAGE */
+
+.form-message {
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.form-message p {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 12px;
+}
+
+
+/* BUTTON */
+
+.continue-button {
+  width: 100%;
+  padding: 16px;
+
+  border: none;
+
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+
+  font-family: var(--font-body), serif;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.continue-button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.continue-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
