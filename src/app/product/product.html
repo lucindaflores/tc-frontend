@@ -1,0 +1,55 @@
+@if (loading) {
+  <p>Loading products...</p>
+} @else if (errorMessage) {
+  <p>{{ errorMessage }}</p>
+} @else {
+  <section class="collection-page">
+
+    <!-- Top title area-->
+    <div class="top-area">
+
+      <div class="top-texts">
+        <p class="top-text"> — HANDCRAFTED WITH PURPOSE</p>
+        <h1 class="title-h1">Explore Our Collection</h1>
+      </div>
+
+      <!--  Buttons: Top right -->
+      <div class="filter-div">
+        <button class="filter-buttons"
+                type="button"
+                [class.selected]="selectedCategory === 0"
+                (click)="loadByCategory(0)">
+          ALL
+        </button>
+
+        <button class="filter-buttons"
+                type="button"
+                [class.selected]="selectedCategory === 1"
+                (click)="loadByCategory(1)">
+          COOKWARE
+        </button>
+
+        <button class="filter-buttons"
+                type="button"
+                [class.selected]="selectedCategory === 2"
+                (click)="loadByCategory(2)">
+          TABLEWARE
+        </button>
+
+        <button class="filter-buttons"
+                type="button"
+                [class.selected]="selectedCategory === 3"
+                (click)="loadByCategory(3)">
+          DÉCOR
+        </button>
+      </div>
+    </div>
+
+    <!--Product grid-->
+    <div class="product-grid">
+      @for (product of products; track product.id) {
+          <label> {{ product.name }}</label>
+      }
+    </div>
+  </section>
+}
