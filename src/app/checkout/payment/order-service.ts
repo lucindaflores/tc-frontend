@@ -3,7 +3,7 @@ import { Service } from '@angular/core';
 @Service()
 export class OrderService {
 
-  private url = 'http://localhost:8080/orders';
+  private url = 'https://talaveracobalto.onrender.com/orders';
 
   async create(order: any): Promise<number> {
 

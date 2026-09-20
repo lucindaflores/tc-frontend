@@ -5,7 +5,7 @@ import { ProductCondensed, ProductModel } from './product-model';
 @Service()
 export class ProductService {
 
-  private readonly url = 'https://talavera-cobalto.onrender.com/products';
+  private readonly url = 'https://talaveracobalto.onrender.com/products';
 
   // Find ALL Products
   async findAll(): Promise<ProductCondensed[]> {

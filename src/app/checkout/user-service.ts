@@ -4,7 +4,7 @@ import { UserModel } from './user-model';
 @Service()
 export class UserService {
 
-  private url = 'https://talavera-cobalto.onrender.com/users';
+  private url = 'https://talaveracobalto.onrender.com/users';
 
 
   async create(user: UserModel): Promise<UserModel> {
