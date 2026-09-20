@@ -4,7 +4,7 @@ import { AddressModel } from './address-model';
 @Service()
 export class AddressService {
 
-  private url = 'http://localhost:8080/addresses';
+  private url = 'https://talavera-cobalto.onrender.com/addresses';
 
   async create(address: AddressModel, userId: number): Promise<number> {
     const response = await fetch(`${this.url}?userId=${userId}`,
