@@ -30,7 +30,6 @@ export class ProductService {
     if (!response.ok) {
       throw new Error('REQUEST_ERROR');
     }
-    console.log("Response OK:" + response.ok);
     return await response.json();
   }
 

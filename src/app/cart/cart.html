@@ -1,0 +1,84 @@
+
+<section class="cart-page">
+
+  <h1>Review Your Cart</h1>
+
+  @if (cartService.items().length === 0) {
+    <p>Your cart is empty.</p>
+  } @else {
+
+    <div class="checkout-layout">
+
+      <!-- Product list -->
+      <div class="cart-products">
+        @for (item of cartService.items(); track item.product.id) {
+          <article class="cart-product">
+
+            <img class="product-image"
+                 [src]="item.product.imageUrl"
+                 [alt]="item.product.name">
+
+            <div class="product-info">
+              <h2>{{ item.product.name }}</h2>
+
+              <p class="product-quantity">Quantity: {{ item.quantity }}</p>
+
+              <!-- Stepper: Quantity-->
+              <app-stepper
+                [max]="item.product.stock"
+                           [initialQuantity]="item.quantity"
+                           (quantityChange)="updateQuantity(item.product.id, $event)" />
+            </div>
+
+            <div class="price-remove-div">
+            <p class="product-price">
+              €{{ item.product.price }}
+            </p>
+
+            <button
+              class="remove-button"
+              type="button"
+              (click)="cartService.remove(item.product.id)">
+              Remove
+            </button>
+            </div>
+          </article>
+        }
+      </div>
+
+      <!-- Order Summary Box-->
+      <aside class="order-summary">
+        <h2>Order Summary</h2>
+
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span>€{{ cartService.totalPrice() }}</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span>Free</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Tax</span>
+          <span>Calculated later</span>
+        </div>
+
+        <div class="summary-row total-row">
+          <strong>Total</strong>
+          <strong>€{{ cartService.totalPrice() }}</strong>
+        </div>
+
+        <button class="continue-button"
+                type="button"
+                routerLink="/checkout">
+          Continue to delivery →
+        </button>
+
+      </aside>
+
+    </div>
+  }
+
+</section>
